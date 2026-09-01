@@ -1,6 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Empaqueta solo los archivos necesarios en .next/standalone para una imagen Docker mínima (Cloud Run).
+  output: "standalone",
   images: {
     remotePatterns: [
       // Bundled placeholder photos (real cars, tagged by body type) used only when API_URL is not set.
